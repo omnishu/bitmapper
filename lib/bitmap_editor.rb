@@ -1,21 +1,23 @@
-require_relative 'bitmapper'
+require './lib/app'
 
+# Class BitmapEditor - Responsible to run the provided input file of commands
 class BitmapEditor
   def run(file)
-    return puts 'Please provide correct file' if file.nil? || !File.exist?(file)
     build_bitmap(file)
   end
 
   private
 
+  # Calls app, builds the Bitmap matrix by executing commands line by line
   def build_bitmap(file)
-    bitmapper = Bitmapper.new
+    return puts 'Please provide correct file' if file.nil? || !File.exist?(file)
+
+    app = App.new
 
     File.open(file).each do |line|
       line = line.chomp
-      bitmapper.execute!(line)
+      mapper = app.mapper
+      mapper.map(line).execute(app)
     end
-    # return bitmapper
-    puts bitmapper.bitmap
   end
 end
