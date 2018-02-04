@@ -17,7 +17,8 @@ class BitmapEditor
     File.open(file).each do |line|
       line = line.chomp
       mapper = app.mapper
-      mapper.map(line).execute(app)
+      a=mapper.map(line)
+      a.execute(app)
     end
   end
 end

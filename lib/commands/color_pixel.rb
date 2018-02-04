@@ -23,5 +23,15 @@ module Commands
       app.bitmap[x, y] = color
     end
 
+    # Class method. Verify the arguments and create the command.
+    #
+    # @param [] args List of the arguments passed to the initialize method.
+    # @return [ColorPixel] the newly created instance of the command.
+    def self.create(*args)
+      raise BadNumberArguments.new(args.length, 3) if args.length != 3
+      raise InvalidArguments unless Utils.int?(args[0]) && Utils.int?(args[1]) && Utils.color?(args[2])
+
+      new(*args)
+    end
   end
 end
