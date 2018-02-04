@@ -1,6 +1,6 @@
 # Base class for all the `Commands` classes
 class Command
-  # Should be implemented by the child class.
+  # Child classes implements respective execution methods
   def execute
     raise NotImplementedMethod
   end
