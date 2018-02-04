@@ -1,4 +1,3 @@
-require 'byebug'
 # Class Mapper
 class Mapper
   def self.commands
@@ -15,12 +14,7 @@ class Mapper
   #
   Mapper.commands.each do |c, v|
     define_method("command_#{c}") do |*args|
-      begin
-        Commands.const_get(v.to_s).create(*args)
-      rescue StandardError => e
-        byebug
-        puts
-      end
+      Commands.const_get(v.to_s).create(*args)
     end
   end
 

@@ -1,4 +1,4 @@
-# Class Error inheriting StandardError class
+# Creating custom errors with base properties of StandardError
 class Error < StandardError; end
 
 # Class OutOfRange to raise the exception when the provided pixel is out of range

@@ -7,9 +7,9 @@ module Commands
 
     # Initialize the Class.
     #
-    # @param x the column to modify
-    # @param y1 the row beginning coordinate
-    # @param y2 the row ending coordinate
+    # @param [Integer] x the column to modify
+    # @param [Integer] y1 the row beginning coordinate
+    # @param [Integer] y2 the row ending coordinate
     # @param [Char] color the colour to apply on the column.
     def initialize(x, y1, y2, color)
       @x = x.to_i

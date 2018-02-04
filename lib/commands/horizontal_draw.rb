@@ -7,10 +7,10 @@ module Commands
 
     # Initialize the Class.
     #
-    # @param x1 the column beginning coordinates.
-    # @param x2 the column ending coordinates.
-    # @param y the row to modify.
-    # @param color the color to apply on the column.
+    # @param [Integer] x1 the column beginning coordinates.
+    # @param [Integer] x2 the column ending coordinates.
+    # @param [Integer] y the row to modify.
+    # @param [Char] color the color to apply on the column.
     def initialize(x1, x2, y, color)
       @x1 = x1.to_i
       @x2 = x2.to_i
@@ -32,7 +32,7 @@ module Commands
     # Class method. Verify the arguments and create the command.
     #
     # @param [] args List of the arguments passed to the initialize method
-    # @return the newly created instance of the command
+    # @return [HorizontalDraw] The newly created instance of the command
     def self.create(*args)
       raise BadNumberArguments.new(args.length, 4) if args.length != 4
       raise InvalidArguments unless valid_args?(args)
