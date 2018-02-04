@@ -7,9 +7,9 @@ module Commands
 
     # Class initializer
     #
-    # @param [Integer] x the x of the pixel
-    # @param [Integer] y the y of the pixel
-    # @param [Char] color the color to apply on (x, y) pixel.
+    # @param [Integer] x The x of the pixel on Bitmap matrix
+    # @param [Integer] y The y of the pixel on Bitmap matrix
+    # @param [Char] color The color to apply on (x, y) pixel
     def initialize(x, y, color)
       @x = x.to_i
       @y = y.to_i
@@ -25,8 +25,8 @@ module Commands
 
     # Class method. Verify the arguments and create the command.
     #
-    # @param [] args List of the arguments passed to the initialize method.
-    # @return [ColorPixel] the newly created instance of the command.
+    # @param [] args List of the arguments passed to the initialize method
+    # @return [ColorPixel] the newly created instance of the command
     def self.create(*args)
       raise BadNumberArguments.new(args.length, 3) if args.length != 3
       raise InvalidArguments unless Utils.int?(args[0]) && Utils.int?(args[1]) && Utils.color?(args[2])

@@ -24,9 +24,9 @@ class Bitmap
 
   # Set and return the data if not done yet.
   #
-  # @return The data representing the bitmap.
+  # @return Bitmap data as a string
   def data
-    @data ||= 'O' * size
+    @data ||= clear
   end
 
   # Clear the bitmap by setting all the pixels to O.
