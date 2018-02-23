@@ -7,7 +7,8 @@ class Mapper
       'L' => 'ColorPixel',
       'V' => 'VerticalDraw',
       'H' => 'HorizontalDraw',
-      'S' => 'Show'
+      'S' => 'Show',
+      'F' => 'Fill'
     }
   end
 
