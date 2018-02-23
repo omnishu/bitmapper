@@ -18,7 +18,8 @@ There are 7 supported commands:
 3. L X Y C - Colours the pixel (X,Y) with colour C.
 4. V X Y1 Y2 C - Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive).
 5. H X1 X2 Y C - Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).
-6. S - Show the contents of the current image
+6. F X Y C - Start filling the region with color C starting from X-Y Coordinates(includive)
+7. S - Show the contents of the current image
 
 
 ## Example
@@ -30,6 +31,7 @@ To run the application you must supply a command file like so `bin/bitmap_editor
     L 1 3 A
     V 2 3 6 W
     H 3 5 2 Z
+    F 1 1 R
     S
 
 
